@@ -8,7 +8,7 @@ const HIDDEN = "hidden";
 
 function onSubmit(e) {
     e.preventDefault();
-    let random = Math.floor(Math.random() * inputNum.value);
+    let random = Math.floor(Math.random() * inputNum.value) + 1;
     //console.log(random);
     let guessNum = guessInput.value;
     const num = parseInt(guessNum, 10);
