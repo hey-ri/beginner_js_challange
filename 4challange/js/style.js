@@ -9,11 +9,13 @@ const HIDDEN = "hidden";
 function onSubmit(e) {
     e.preventDefault();
     let random = Math.floor(Math.random() * inputNum.value);
-    console.log(random);
+    //console.log(random);
+    let guessNum = guessInput.value;
+    const num = parseInt(guessNum, 10);
 
-    p.innerText = `You chose ${guessInput.value} , the machine chose ${random}`;
+    p.innerText = `You chose ${guessNum} , the machine chose ${random}`;
 
-    if (parseInt(guessInput.value) === random) {
+    if (num === random) {
         p.classList.remove(HIDDEN);
         strong.innerText = "You Win";
         strong.classList.remove(HIDDEN);
