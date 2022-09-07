@@ -13,7 +13,7 @@ function onLoginSubmit(e) {
     /* localStorage는 미니DB같은 존재다. 개발자도구 애플리케이션의 로컬스토리지에 들어가면 볼 수 있는데 key,value값이 필요로 된다. */
     localStorage.setItem(USERNAME_KEY, wroteUsername);
     //console.log(userName);
-    paintingGreeting();
+    paintingGreeting(wroteUsername);
 }
 
 function paintingGreeting(username) {
@@ -32,5 +32,5 @@ if (savedUsername === null) {
     loginForm.addEventListener("submit", onLoginSubmit);
 } else {
     //show greetings
-    paintingGreeting();
+    paintingGreeting(savedUsername);
 }
