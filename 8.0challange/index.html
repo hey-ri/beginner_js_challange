@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hello My User</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="img/icon.jpg">
+    </head>
+    <body>
+
+        <div class="wrap">
+                <div class="top">
+                    <!-- 시계 -->
+                    <h2 id="clock">00:00</h2>
+
+                    <!-- 날씨 -->
+                    <div id="weather">
+                        <span></span>
+                        <span class="location"></span>
+                    </div>
+                </div>
+
+                <!-- 아이디 -->
+                <div class="log">
+                    <form action="" id="loginForm" class="hidden">
+                        <input type="text" maxlength="10" required placeholder="what's your name?" id="userNameInput"/>
+                        <input type="submit" value="Log in" id="btn"/>
+                    </form>
+                    <h1 class="hidden">Well come My <span class="hidden" id="greeting"></span></h1>
+                    <input type="submit" class="hidden" id="logout" value="Log out"></input>
+                </div>
+                
+
+                <!-- 명언 -->
+                <div id="quote">
+                    <span></span>
+                    <span class="name"></span>
+                </div>
+
+                <!-- 투두리스트 -->
+                <div class="todo">
+                    <form action="" id="todoForm">
+                        <input type="text" placeholder="할 일을 입력하세요." />
+                    </form>
+                    <ul id="todoList"></ul>
+                </div>
+        </div>
+
+        <script src="js/login.js"></script>
+        <script src="js/clock.js"></script>
+        <script src="js/quotes.js"></script>
+        <script src="js/back.js"></script>
+        <script src="js/todo.js"></script>
+        <script src="js/weather.js"></script>
+    </body>
+</html>
